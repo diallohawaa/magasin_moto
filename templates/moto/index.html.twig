@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+ 
+{% block title "Magasin moto" %}
+
+{% block body %}
+<h1>Bienvenu dans mon magasin maoto</h1>
+<div class = "container text-center">
+    <div class = "row">
+    {% for moto in moto %}
+    <div class="card max-w-sm col-4 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 my-8 mr-4" data-type="post">
+        <h2><a href={{ path('app_moto_show', {id : moto.id, marque : moto.marque})}}>{{ moto.nom }} </a></h2>
+        <img src = "https://pbs.twimg.com/media/EdDUBw0WkAAQLJ1?format=jpg&name=large" width="150" height="200">
+        <p>Submitted {{ moto.createdAt |date }}</p> 
+    </div>
+
+        
+    {% else %}
+        <p>Pas encore de moto</p>
+    {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+</div>
+</div>
+{% endblock %}

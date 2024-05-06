@@ -1,0 +1,25 @@
+                    
+{% extends 'base.html.twig' %}
+
+{# {% block title  %}#{{recipe.id}}{{recipe.slug}}{% endblock %} #}
+{% block nom  %}#{{moto.id ~" "~moto.marque}}{% endblock %}
+
+{% block body %}
+
+<h3>{{moto.nom | nom }}</h3>
+{# form est la fonction fourni par symfony,
+ et monForm c'est le nom qui vient de la methode edit dans recipeController #}
+
+
+{# ici c'est une des maniere de modification l'agencement des formulaires #}
+{{form_start(monForm)}}
+<div class = "d-flex gap-3">
+    {{form_row(monForm.nom)}}
+</div>
+{# <div class = "d-flex gap-3">
+    {{form_row(monForm.createdAt)}}
+    {{form_row(monForm.updatedAt)}}
+</div> #}
+{{form_end(monForm)}}
+
+{% endblock %}

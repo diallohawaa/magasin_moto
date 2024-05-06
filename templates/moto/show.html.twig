@@ -1,0 +1,16 @@
+                        {# le fichier pour l'affichage #}
+{% extends 'base.html.twig' %}
+
+{# {% block title %}Liste des recettes{% endblock %} #}
+  {# #exo11      {% block title  %}#{{recipe.id}}{{recipe.slug}}{% endblock %} #}
+{% block nom %}#{{moto.id}}{{moto.marque}}{{moto.couleur}}{{moto.annee}}{{moto.prix}}{% endblock %}
+
+{% block body %}
+<h3>Voici la moto numero {{moto.id }}</h3>
+
+<p>{{moto.marque|nl2br}}<p/>
+{# {{slug |title}} pour mettre la prmiere lettre en majuscule #}
+{# <p>je m'appelle {{user.firstname}} {{user.lastname}}</p> #}
+{# <p>recette crée par {{user.firstname ~" "~ user.lastname}}</p> #}
+{# <p>mon nom est{{user.lastname}}<p/> #}
+{% endblock %}
